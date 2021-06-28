@@ -8,17 +8,25 @@ width: 30vh;
 
 
 }
+
 h1 {
     position: absolute;
     top: 12vh;
 }
+
 main div {
 
 position: relative;
 top: 50vh;
 width: 40vh;
-
 }
-#divmain1 img {
-    text-align: center;
-}
+ul {
+    list-style-type:circle;
+      margin: 30px;
+  }
+  h2 {
+      color: brown;
+      font-family: 'Viaoda Libre', cursive;
+          
+      }
+  
