@@ -114,7 +114,7 @@ let place = {
 let pl = ['Seattle', 'Tokyo', 'Dubai', 'Paris', 'Lima']
 let maxp = [65, 24, 38, 38, 16]
 let minp = [23, 3, 11, 20, 2]
-let av = [6.3, 1.2, 3.7, 2.3, 4.6]
+let av =   [6.3, 1.2, 3.7, 2.3, 4.6]
 place.render();
 for (let i = 0; i < pl.length; i++) {
     place.namelist = 'list of our working  on  ' + pl[i]
