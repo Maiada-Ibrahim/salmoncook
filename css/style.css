@@ -1,6 +1,6 @@
  
  body{
-     background-color: bisque;
+     background-color:teal;
  }
  
  #logo img   {
@@ -32,11 +32,12 @@ ul {
 
           
       }
-      table,
+      table
       tr,
-      th,
+      
       td {
         border: 1px solid;
+    border-color: white;
       }
       
   
