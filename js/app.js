@@ -189,7 +189,8 @@ Lima.cooknumf();
 
 
 
-
+let k = 0;
+let y = [];
 
 for (let i = 0; i < placesalot.length; i++) {
 
@@ -273,36 +274,105 @@ for (let i = 0; i < placesalot.length; i++) {
 
 
     tableEl.appendChild(trEl);
+
+
 }
 
 
 
 
 
-let d = []
-let m=0;
+let d = [];
 let totperhour = function () {
-    
+
+    let m = 0;
+    let x = 0;
+
+
     for (let i = 0; i < 15; i++) {
-        for (let j = 0; j < 5; j++) {
-             m = where[j].placesalot[i]
-            d.push(m)
+        for (let j = 0; j <= 4; j++) {
+            x = Number(placesalot[j][i]);
+            m = m + x;
+       
         }
+       
+        d.push(m)}
+       
+    
 
-    }
 
 
-
+    return d;
 
 }
-console.log(placesalot[0])
-let trEl = document.createElement('tr');
+totperhour();
+
+ let trEl = document.createElement('tr');
     let td18 = document.createElement('td');
-    td18.textContent = 'total';
-    trEl.appendChild(td18);
+  td18.textContent = 'total/h';
+  trEl.appendChild(td18);
 
-    let td19 = document.createElement('td');
-    td19.textContent =  d[0];
-    trEl.appendChild(td19);
+  let td19 = document.createElement('td');
+ td19.textContent =  d[0];
+ trEl.appendChild(td19);
+ 
 
-    tableEl.appendChild(trEl);
+ let td20 = document.createElement('td');
+ td20.textContent =  d[1];
+ trEl.appendChild(td20);
+ 
+
+ let td21 = document.createElement('td');
+ td21.textContent =  d[2];
+ trEl.appendChild(td21);
+ 
+ let td22 = document.createElement('td');
+ td22.textContent =  d[3];
+ trEl.appendChild(td22);
+ 
+ let td23 = document.createElement('td');
+ td23.textContent =  d[4];
+ trEl.appendChild(td23);
+ 
+ let td24 = document.createElement('td');
+ td24.textContent =  d[6];
+ trEl.appendChild(td24);
+ 
+ let td25 = document.createElement('td');
+ td25.textContent =  d[7];
+ trEl.appendChild(td25);
+ 
+ let td26 = document.createElement('td');
+ td26.textContent =  d[8];
+ trEl.appendChild(td26);
+
+ let td27 = document.createElement('td');
+ td27.textContent =  d[9];
+ trEl.appendChild(td27);
+
+ let td28 = document.createElement('td');
+ td28.textContent =  d[10];
+ trEl.appendChild(td28);
+
+ let td29 = document.createElement('td');
+ td29.textContent =  d[11];
+ trEl.appendChild(td29);
+
+ let td30 = document.createElement('td');
+ td30.textContent =  d[12];
+ trEl.appendChild(td30);
+
+ let td31 = document.createElement('td');
+ td31.textContent =  d[13];
+ trEl.appendChild(td31);
+
+ let td32 = document.createElement('td');
+ td32.textContent =  d[14];
+ trEl.appendChild(td32);
+
+ let td33= document.createElement('td');
+ td33.textContent =  d[15];
+ trEl.appendChild(td33);
+
+ tableEl.appendChild(trEl)
+ 
