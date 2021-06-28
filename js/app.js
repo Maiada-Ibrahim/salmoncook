@@ -1,18 +1,16 @@
 
+let place = {
 
-
-
-let seattle = {
-    max: 65,
-    min: 23,
-    avrgcook: 6.3,
+    max: 1,
+    min: 1,
+    avrgcook: 1,
     cooknum: [],
     custnum: 0,
     viwe: [],
     image: 'img/salmonpic.png',
     titlewebsie: 'Salamon Cookies',
-    namelist: 'list of our working',
-    
+    namelist: 'list of our working  on ',
+
 
     getcustnum: function (min, max) {
         this.custnum = Math.floor(Math.random() * (max - min + 1) + min);
@@ -28,8 +26,8 @@ let seattle = {
         let total = 0;
         let w = '';  // string to have the contant of 6 hour
         for (let i = 0; i < 14; i++) {
-           
-            this.getcustnum(23, 65);
+
+            this.getcustnum(this.min, this.max);
             let a = this.avrgcook * this.custnum;
             a = Math.floor(a);
             total = total + a
@@ -55,7 +53,7 @@ let seattle = {
         w = `total : ${total} cookies`
         this.viwe.push(w);
 
-    
+
     },
 
     render: function () {
@@ -68,7 +66,9 @@ let seattle = {
         let imgEl = document.createElement('img');
         imgEl.setAttribute('src', this.image);
         divEl.appendChild(imgEl);
+    },
 
+    render2: function () {
 
         let articleEl = document.createElement('article');
         divmain1.appendChild(articleEl);
@@ -91,11 +91,17 @@ let seattle = {
 
 
     },
-    
+
 }
 
 
 
+// place.getcustnum(23, 65)
+// //console.log(place.custnum)
+// place.cooknumf()
+// //console.log(place.cooknum)
+// //console.log(place.viwe)
+// place.render()
 
 
 
@@ -106,23 +112,26 @@ let seattle = {
 
 
 
-seattle.getcustnum(23, 65)
-console.log(seattle.custnum)
-seattle.cooknumf()
-console.log(seattle.cooknum)
-console.log(seattle.viwe)
-seattle.render()
+let pl = ['Seattle', 'Tokyo', 'Dubai', 'Paris', 'Lima']
+let maxp = [65, 24, 38, 38, 16]
+let minp = [23, 3, 11, 20, 2]
+let av = [6.3, 1.2, 3.7, 2.3, 4.6]
+place.render()
+for (let i = 0; i < pl.length; i++) {
+    place.namelist = 'list of our working  on  ' + pl[i]
+    place.max = maxp[i]
+    place.min = minp[i]
+    place.avrgcook = av[i];
+    place.getcustnum(minp[0], maxp[0])
+    //console.log(place.custnum)
+    place.cooknumf()
+    //console.log(place.cooknum)
+    //console.log(place.viwe)
+    place.render2()
+    place.viwe = [];
+    place.cooknum = []
+    place.custnum = 0
 
-
-
-// let loc ={
-//     ourfrog: [Seattle,Tokyo,Dubai,Paris,Lima]  ,
-//     for (let i=0 ; i< ourfrog.length; i++){ },
-    
-//   },
-
-
-
-
+}
 
 

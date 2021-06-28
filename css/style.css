@@ -1,0 +1,35 @@
+ 
+ body{
+     background-color: bisque;
+ }
+ 
+ #logo img   {
+width: 30vh;
+
+
+}
+
+h1 {
+    position: static;
+    top: 12vh;
+}
+
+#part2 {
+display:block;
+
+text-align: center;
+}
+ul {
+    list-style-type:circle;
+      margin: 30px;
+  }
+  h2 {
+      color: brown;
+      font-family: 'Viaoda Libre', cursive;
+      font-size: 5vh;
+      text-align: center;
+      margin:10vh;
+
+          
+      }
+  
