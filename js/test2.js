@@ -201,3 +201,63 @@ Place.prototype.cooknumf = function () {
         thEl15.textContent = '7pm';
         trEl.appendChild(thEl15);
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    body{
+        background-color:teal;
+    }
+    
+    #logo img   {
+   width: 30vh;
+   
+   
+   }
+   
+   h1 {
+       position: static;
+       top: 12vh;
+   }
+   
+   #part2 {
+   display:block;
+   
+   text-align: center;
+   }
+   ul {
+       list-style-type:circle;
+         margin: 30px;
+     }
+     h2 {
+         color: brown;
+         font-family: 'Viaoda Libre', cursive;
+         font-size: 5vh;
+         text-align: center;
+         margin:10vh;
+   
+             
+         }
+         table
+         tr,
+         
+         td {
+           border: 1px solid;
+       border-color: white;
+         }
+         
+     

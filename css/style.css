@@ -1,43 +1,78 @@
  
- body{
-     background-color:teal;
- }
- 
- #logo img   {
-width: 30vh;
+*{box-sizing: border-box;}
+
+body{
+    background-color:peachpuff;
+    margin: 0%;
 
 
+} 
+
+header p{
+    color:teal;
+    
+    
 }
-
-h1 {
-    position: static;
-    top: 12vh;
+header div{
+    
+    
+    display: inline-block;
+    height: 25vh;
+   
+    padding-left: 0vh;
 }
-
-#part2 {
-display:block;
-
-text-align: center;
+#logo {
+   float: left; 
+   padding:0%;
+   width: 100%;
 }
-ul {
-    list-style-type:circle;
-      margin: 30px;
-  }
-  h2 {
-      color: brown;
-      font-family: 'Viaoda Libre', cursive;
-      font-size: 5vh;
-      text-align: center;
-      margin:10vh;
-
-          
-      }
-      table
-      tr,
-      
-      td {
-        border: 1px solid;
-    border-color: white;
-      }
-      
-  
+header nav ul li{
+    display:inline-block;
+}
+nav{
+    padding: 5%;
+    padding-left: 5vh;
+}
+h1{
+   text-align: center;
+   font-size: 40px; 
+   color: purple;
+}
+article div img{
+    width: 30vh;
+    height: 30vh;
+    
+    
+}
+article div{
+    width: 35vh;
+    height: 50vh;
+    margin-top:  5vh; 
+     display: inline-block;
+     margin: 10vh;
+     padding: 3vh;
+     border: 2px solid;
+}
+section{
+    display:inline-block;
+    margin-top: 10vh;
+    margin-bottom: 15vh;
+    width: 100%;
+    width: 100%;
+}
+article{
+    display: inline-block;
+    margin-left:30vh;
+}
+section h2{
+    font-family: fantasy;
+    color: purple;
+    text-align: center;
+    font-size: 40px;
+}
+section p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10vh;
+}
