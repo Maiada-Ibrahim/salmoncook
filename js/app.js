@@ -1,4 +1,3 @@
-
 'use strict';
 
 let objectarry = [];
@@ -138,6 +137,9 @@ Lima.render();
 
 
 
+
+
+
 function createFooter() {
     let rfootEl = document.createElement('tr');
     let tdEl = document.createElement('td');
@@ -163,3 +165,24 @@ function createFooter() {
     rfootEl.appendChild(totalTdEl);
 }
 createFooter();
+
+
+
+
+let fEl=document.getElementById('myform');
+myform.addEventListener('submit', addNewplace);
+
+function addNewplace(event) {
+    event.preventDefault();
+    let name =event.target.placename.value;
+    let min =event.target.min.value;
+    let max =event.target.max.value;
+    let average1 = event.target.avrage1.value;
+    let b = new Place(name, min, max, average1);
+    b.getcustnum(min, max);
+    b.cooknumf();
+    b.render();
+   
+}
+
+
