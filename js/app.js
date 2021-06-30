@@ -179,9 +179,17 @@ function addNewplace(event) {
     let max =event.target.max.value;
     let average1 = event.target.avrage1.value;
     let b = new Place(name, min, max, average1);
+
     b.getcustnum(min, max);
     b.cooknumf();
     b.render();
+    let rowscount = tableEl.rows.length
+    console.log(rowscount)
+    for (let i = objectarry.length;i<rowscount;i++){
+    tableEl.deleteRow(i);     //لانه في صف للعنوان
+    rowscount--}
+     createFooter();
+
    
 }
 
