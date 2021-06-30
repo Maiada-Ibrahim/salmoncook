@@ -53,7 +53,8 @@ let he1 = document.createElement('h1');
 he1.textContent = 'Salamon Cookies';
  divEl.appendChild(he1);
  let imgEl = document.createElement('img');
- imgEl.setAttribute('src', image);
+ imgEl.setAttribute('src', image );
+ 
   divEl.appendChild(imgEl);}
 imagef();
 

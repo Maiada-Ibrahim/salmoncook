@@ -16,27 +16,40 @@ header p{
 header div{
     
     
-    display: inline-block;
-    height: 25vh;
-   
-    padding-left: 0vh;
+display: block;
+height: 10vh;
+ width: 100%;
+    
 }
-#logo {
-   float: left; 
-   padding:0%;
-   width: 100%;
-}
-header nav ul li{
+
+header nav ul  li {
+    
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 2vh;
+    
     display:inline-block;
+    
+    
 }
 nav{
     padding: 5%;
-    padding-left: 5vh;
+    padding-left: 0vh;
+    
+    margin-top:  0vh;
+   
+    
+   
 }
 h1{
-   text-align: center;
+   
    font-size: 40px; 
    color: purple;
+  
+   display: inline-block;
+   position: absolute;
+   top: 2vh;
+   left: 70vh;
+  
 }
 article div img{
     width: 30vh;
@@ -51,7 +64,7 @@ article div{
      display: inline-block;
      margin: 10vh;
      padding: 3vh;
-     border: 2px solid;
+    
 }
 section{
     display:inline-block;
@@ -75,4 +88,26 @@ section p{
     font-size: 20px;
     text-align: center;
     margin-top: 10vh;
+}
+
+#last{
+    margin-left:  10%;
+}
+a {
+text-decoration-line: none;
+}
+p{
+    font-size: 20px;
+    color:teal;
+}
+
+table
+tr,
+
+td {
+  border: 1px solid;
+border-color: white;
+}
+#logo{
+    display: inline-block;
 }
