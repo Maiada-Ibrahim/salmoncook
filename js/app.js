@@ -10,13 +10,13 @@ function Place(name, min, max, avrgcook) {
     this.name = name;
     this.min = min;
     this.max = max,
-    this.avrgcook = avrgcook;
+        this.avrgcook = avrgcook;
     this.cooknum = [];
     this.custnum = 0;
     this.image = 'img/salmonpic.png';
     this.titlewebsie = 'Salamon Cookies';
     this.namelist = 'list of our working  on ';
-    
+
     objectarry.push(this);
 
 }
@@ -37,24 +37,25 @@ Place.prototype.cooknumf = function () {
         let cooknumg = Math.floor(this.avrgcook * this.custnum);
 
         total = total + cooknumg
-     this.cooknum.push(cooknumg);
+        this.cooknum.push(cooknumg);
     }
-    this.total=total
+    this.total = total
 }
 
 
 
 
-function imagef () {
- let   image = 'img/salmonpic.png'
- let divEl = document.getElementById('logo');
-let he1 = document.createElement('h1');
-he1.textContent = 'Salamon Cookies';
- divEl.appendChild(he1);
- let imgEl = document.createElement('img');
- imgEl.setAttribute('src', image );
- 
-  divEl.appendChild(imgEl);}
+function imagef() {
+    let image = 'img/salmonpic.png'
+    let divEl = document.getElementById('logo');
+    let he1 = document.createElement('h1');
+    he1.textContent = 'Salamon Cookies';
+    divEl.appendChild(he1);
+    let imgEl = document.createElement('img');
+    imgEl.setAttribute('src', image);
+
+    divEl.appendChild(imgEl);
+}
 imagef();
 
 
@@ -71,7 +72,7 @@ Place.prototype.render = function () {
         trEl2.appendChild(tdEl)
     }
     let tdE2 = document.createElement('td')
-    tdE2.textContent =this.total
+    tdE2.textContent = this.total
     trEl2.appendChild(tdE2)
 }
 
@@ -96,35 +97,26 @@ function createTableHeader() {
 
 createTableHeader();
 
+function help() {
 
-let seattle = new Place('Seattle', 23, 65, 6.3);
-seattle.getcustnum(23, 65);
-seattle.cooknumf();
-seattle.render();
+    for (let i = 0; i < objectarry.length; i++) {
+        objectarry[i].getcustnum(objectarry[i][1], objectarry[i][2]);
+        objectarry[i].cooknumf();
+        objectarry[i].render();
+    }
 
-
-let tokyo = new Place('Tokyo', 3, 24, 1.2);
-tokyo.getcustnum(3, 24);
-tokyo.cooknumf();
-tokyo.render();
-
-
-
+}
+let Seattle = new Place('Seattle', 23, 65, 6.3);
+let Tokyo = new Place('Tokyo', 3, 24, 1.2);
 let Dubai = new Place('Dubai', 11, 38, 3.7);
-Dubai.getcustnum(11, 38);
-Dubai.cooknumf();
-Dubai.render();
-
-
 let Paris = new Place('Paris', 20, 38, 2.3);
-Paris.getcustnum(20, 38);
-Paris.cooknumf();
-Paris.render();
-
 let Lima = new Place('Lima', 2, 16, 4.6);
-Lima.getcustnum(2, 16);
-Lima.cooknumf();
-Lima.render();
+
+help()
+
+
+
+
 
 
 
@@ -147,14 +139,14 @@ function createFooter() {
     rfootEl.appendChild(tdEl);
     tableEl.appendChild(rfootEl);
     let megaTotal = 0;
-  
+
     for (let h = 0; h < hour.length; h++) {
         let tdEl = document.createElement('td');
         let sum = 0;
-       
-        for (let s = 0; s <objectarry .length; s++) {
-         
-            sum =Number(sum + objectarry[s].cooknum[h])
+
+        for (let s = 0; s < objectarry.length; s++) {
+
+            sum = Number(sum + objectarry[s].cooknum[h])
         }
         megaTotal += sum;
         tdEl.textContent = sum;
@@ -169,14 +161,14 @@ createFooter();
 
 
 
-let fEl=document.getElementById('myform');
+let fEl = document.getElementById('myform');
 myform.addEventListener('submit', addNewplace);
 
 function addNewplace(event) {
     event.preventDefault();
-    let name =event.target.placename.value;
-    let min =event.target.min.value;
-    let max =event.target.max.value;
+    let name = event.target.placename.value;
+    let min = event.target.min.value;
+    let max = event.target.max.value;
     let average1 = event.target.avrage1.value;
     let b = new Place(name, min, max, average1);
 
@@ -184,13 +176,14 @@ function addNewplace(event) {
     b.cooknumf();
     b.render();
     let rowscount = tableEl.rows.length
-    console.log(rowscount)
-    for (let i = objectarry.length;i<rowscount;i++){
-    tableEl.deleteRow(i);     //لانه في صف للعنوان
-    rowscount--}
-     createFooter();
+    for (let i = objectarry.length; i < rowscount; i++) {
+        tableEl.deleteRow(i);     //لانه في صف للعنوان
+        rowscount--
+    }
+    createFooter();
 
-   
+
+
 }
 
 
