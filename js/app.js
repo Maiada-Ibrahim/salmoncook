@@ -10,13 +10,9 @@ function Place(name, min, max, avrgcook) {
     this.name = name;
     this.min = min;
     this.max = max,
-        this.avrgcook = avrgcook;
+    this.avrgcook = avrgcook;
     this.cooknum = [];
     this.custnum = 0;
-    this.image = 'img/salmonpic.png';
-    this.titlewebsie = 'Salamon Cookies';
-    this.namelist = 'list of our working  on ';
-
     objectarry.push(this);
 
 }
@@ -46,11 +42,11 @@ Place.prototype.cooknumf = function () {
 
 
 function imagef() {
-    let image = 'img/salmonpic.png'
+    let image = 'img/logo.png'
     let divEl = document.getElementById('logo');
-    let he1 = document.createElement('h1');
-    he1.textContent = 'Salamon Cookies';
-    divEl.appendChild(he1);
+    let he3 = document.createElement('h3');
+    he3.textContent = 'Salamon Cookies';
+    divEl.appendChild(he3);
     let imgEl = document.createElement('img');
     imgEl.setAttribute('src', image);
 

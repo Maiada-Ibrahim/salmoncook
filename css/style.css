@@ -2,8 +2,12 @@
 *{box-sizing: border-box;}
 
 body{
-    background-color:peachpuff;
-    margin: 0%;
+
+    background-image: url("/img/back4.png");
+    background-size: cover;
+    border: solid 2px mediumblue;
+    margin: 2%;
+    height:200vh;
 
 
 } 
@@ -25,35 +29,27 @@ height: 10vh;
 header nav ul  li {
     
    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    margin: 2vh;
-    
+    margin: 2vh; 
     display:inline-block;
     
     
 }
 nav{
-    padding: 5%;
-    padding-left: 0vh;
-    
-    margin-top:  0vh;
-   
-    
-   
+    padding: 5%;  
 }
 h1{
    
    font-size: 40px; 
    color: purple;
-  
    display: inline-block;
-   position: absolute;
-   top: 2vh;
+   position: relative;
+   bottom: 5vh;
    left: 70vh;
   
 }
 article div img{
-    width: 30vh;
-    height: 30vh;
+    width: 35vh;
+    height: 40vh;
     
     
 }
@@ -91,14 +87,14 @@ section p{
 }
 
 #last{
-    margin-left:  10%;
+    margin-left:  45%;
 }
 a {
 text-decoration-line: none;
 }
 p{
     font-size: 20px;
-    color:teal;
+    color:rgb(14, 245, 245);
 }
 
 table
@@ -127,5 +123,17 @@ main div form fieldset{
 }
 input{
     margin-top: 10px;
+}
+#tableindex tr ,td{
+
+border:none;
+
+
+}
+#tableindex{
+    display: inline-block;
+    position:relative ;
+    top: 120px;
+    left: 125vh;
 }
 
