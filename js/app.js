@@ -42,15 +42,13 @@ Place.prototype.cooknumf = function () {
 
 
 function imagef() {
-    let image = 'img/logo.png'
-    let divEl = document.getElementById('logo');
-    let he3 = document.createElement('h3');
-    he3.textContent = 'Salamon Cookies';
-    divEl.appendChild(he3);
-    let imgEl = document.createElement('img');
-    imgEl.setAttribute('src', image);
-
-    divEl.appendChild(imgEl);
+    let hdivE= document.getElementById('divheader')
+     // let image = 'img/logo.png'
+    // let imgEl = document.createElement('img');
+    // imgEl.setAttribute('src', image);
+    let myImage = new Image(100, 33);
+    myImage.src = 'img/logo.png';
+    hdivE.appendChild(myImage);
 }
 imagef();
 
@@ -129,11 +127,14 @@ help()
 
 
 function createFooter() {
+    let tfoot = document.createElement('tfoot');
+     tableEl.appendChild(tfoot)
     let rfootEl = document.createElement('tr');
     let tdEl = document.createElement('td');
     tdEl.textContent = 'Totals';
     rfootEl.appendChild(tdEl);
-    tableEl.appendChild(rfootEl);
+    tfoot.appendChild(rfootEl);
+    tableEl.appendChild(tfoot);
     let megaTotal = 0;
 
     for (let h = 0; h < hour.length; h++) {
@@ -147,10 +148,14 @@ function createFooter() {
         megaTotal += sum;
         tdEl.textContent = sum;
         rfootEl.appendChild(tdEl);
+       
+
     }
     let totalTdEl = document.createElement('td');
     totalTdEl.textContent = megaTotal;
     rfootEl.appendChild(totalTdEl);
+  
+
 }
 createFooter();
 
@@ -171,11 +176,12 @@ function addNewplace(event) {
     b.getcustnum(min, max);
     b.cooknumf();
     b.render();
-    let rowscount = tableEl.rows.length
-    for (let i = objectarry.length; i < rowscount; i++) {
-        tableEl.deleteRow(i);     //لانه في صف للعنوان
-        rowscount--
-    }
+    // let rowscount = tableEl.rows.length
+    // for (let i = objectarry.length; i < rowscount; i++) {
+    //     tableEl.deleteRow(i);     //لانه في صف للعنوان
+    //     rowscount--
+    // }
+    tableEl.deleteTFoot();
     createFooter();
 
 
