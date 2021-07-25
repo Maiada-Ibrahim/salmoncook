@@ -43,9 +43,6 @@ Place.prototype.cooknumf = function () {
 
 function imagef() {
     let hdivE= document.getElementById('divheader')
-     // let image = 'img/logo.png'
-    // let imgEl = document.createElement('img');
-    // imgEl.setAttribute('src', image);
     let myImage = new Image(100, 33);
     myImage.src = 'img/logo.png';
     hdivE.appendChild(myImage);

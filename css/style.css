@@ -3,7 +3,7 @@
 
 body{
 
-    background-image: url("/img/back4.png");
+    background-image: url("img/back4.png");
     background-size: cover;
     border: solid 2px mediumblue;
     margin: 2%;
@@ -17,9 +17,7 @@ header p{
     
     
 }
-header div{
-    
-    
+header div{  
 display: block;
 height: 10vh;
  width: 100%;
